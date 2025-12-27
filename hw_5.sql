@@ -58,7 +58,7 @@ DETERMINISTIC
 
 BEGIN
 	DECLARE result FLOAT;
-    SET result = arg_1 / arg_2;
+    SET result = arg_1 / NULLIF(arg_2, 0);
 RETURN result;
 END
 
